@@ -2,12 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = document.getElementById('img');
     const canvas = document.getElementById('canvas');
     const downloadButton = document.getElementById('downloadButton');
-    const context = canvas.getContext('2d');
 
     img.addEventListener('load', () => {
         canvas.height = img.height;
         canvas.width = img.width;
-        context.filter = 'contrast(1.4) sepia(1) blur(3)';
+        const context = canvas.getContext('2d');
+        context.filter = 'contrast(1.4) sepia(1)';
+        console.log(context.filter);
         context.drawImage(img, 0, 0, img.width * 1, img.height * 1);
     });
 
