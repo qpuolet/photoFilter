@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.width = img.width;
         const context = canvas.getContext('2d');
         context.filter = 'contrast(1.4) sepia(1)';
-        console.log(context.filter);
         context.drawImage(img, 0, 0, img.width * 1, img.height * 1);
     });
 
