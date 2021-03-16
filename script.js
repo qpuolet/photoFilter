@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadButton = document.getElementById('downloadButton');
 
     img.addEventListener('load', () => {
-        canvas.height = img.height;
-        canvas.width = img.width;
+        // canvas.height = img.height;
+        // canvas.width = img.width;
         const context = canvas.getContext('2d');
         context.filter = 'contrast(1.4) sepia(1) blur(3)';
         context.drawImage(img, 0, 0, img.width * 1, img.height * 1);
